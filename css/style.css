@@ -145,6 +145,56 @@ ul{ margin:0; padding:0; list-style:none; }
 @keyframes labelIn{ to{ opacity:1; } }
 
 /* ==========================================================
+   Inner page hero (About, Programs, Contact, Stories)
+   ========================================================== */
+.page-hero{ padding:64px 0 40px; }
+.page-hero h1{ font-size:clamp(2.1rem, 4vw, 3rem); max-width:16ch; }
+.page-hero .hero-lede{ max-width:60ch; }
+
+/* ==========================================================
+   Ladder steps list (About page)
+   ========================================================== */
+.ladder-steps{ list-style:none; margin:0; padding:0; counter-reset:none; display:flex; flex-direction:column; gap:26px; }
+.ladder-steps li{ display:flex; gap:18px; padding-bottom:26px; border-bottom:1px solid var(--line); }
+.ladder-steps li:last-child{ border-bottom:none; padding-bottom:0; }
+.step-num{ font-family:var(--font-mono); font-size:1.4rem; font-weight:500; color:var(--ochre-dark); min-width:2.4ch; }
+.ladder-steps h3{ font-size:1.1rem; margin-bottom:.3em; }
+.ladder-steps p{ margin:0; font-size:.95rem; }
+
+.mission-band{ background:var(--paper-dim); border-radius:var(--radius); }
+
+/* ==========================================================
+   Programs directory — filter bar & grid
+   ========================================================== */
+.filter-bar{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px; }
+.filter-chip{
+  font-family:var(--font-body); font-size:.88rem; font-weight:500;
+  padding:9px 18px; border-radius:999px; border:1.5px solid var(--line);
+  background:var(--white); color:var(--ink-soft); cursor:pointer;
+  transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+.filter-chip:hover{ border-color:var(--ochre); color:var(--ink); }
+.filter-chip.is-active{ background:var(--ink); border-color:var(--ink); color:var(--paper); }
+
+.results-count{
+  font-family:var(--font-mono); font-size:.82rem; color:var(--ink-soft);
+  margin:0 0 20px;
+}
+
+.programs-grid{ margin-top:0; }
+.prog-card[hidden]{ display:none; }
+
+.no-results{
+  text-align:center; padding:40px 20px; color:var(--ink-soft);
+  border:1px dashed var(--line); border-radius:var(--radius);
+}
+
+@media (max-width: 720px){
+  .filter-bar{ overflow-x:auto; flex-wrap:nowrap; padding-bottom:6px; -webkit-overflow-scrolling:touch; }
+  .filter-chip{ flex-shrink:0; }
+}
+
+/* ==========================================================
    Rung divider — signature element between sections
    ========================================================== */
 .rung-divider{

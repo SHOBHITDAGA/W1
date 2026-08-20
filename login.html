@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — Skill India Digital Hub</title>
+<meta name="description" content="Log in or create a free account on Skill India Digital Hub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo" aria-label="Skill India Digital Hub, home">
+      <svg class="logo-mark" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="6" y1="2" x2="6" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="22" y1="2" x2="22" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="6" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="6" y1="14" x2="22" y2="14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="6" y1="20" x2="22" y2="20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span>Skill India <strong>Digital Hub</strong></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="stories.html">Success Stories</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="nav-cta" aria-current="page">Log in</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="auth-section">
+    <div class="wrap auth-wrap">
+
+      <div class="auth-card">
+        <div class="auth-tabs" role="tablist">
+          <button class="auth-tab is-active" id="tabLogin" role="tab" aria-selected="true" aria-controls="loginPanel">Log in</button>
+          <button class="auth-tab" id="tabSignup" role="tab" aria-selected="false" aria-controls="signupPanel">Sign up</button>
+        </div>
+
+        <p class="auth-status" id="authStatus" role="status" aria-live="polite" hidden></p>
+
+        <!-- LOGIN FORM -->
+        <form id="loginPanel" class="auth-form" role="tabpanel" aria-labelledby="tabLogin">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required autocomplete="email" placeholder="you@example.com">
+
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" required autocomplete="current-password" placeholder="••••••••">
+
+          <button type="submit" class="btn btn-primary btn-block" id="loginSubmit">Log in</button>
+        </form>
+
+        <!-- SIGNUP FORM -->
+        <form id="signupPanel" class="auth-form" role="tabpanel" aria-labelledby="tabSignup" hidden>
+          <label for="signupName">Full name</label>
+          <input type="text" id="signupName" required autocomplete="name" placeholder="Your name">
+
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" required autocomplete="email" placeholder="you@example.com">
+
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" required autocomplete="new-password" minlength="6" placeholder="At least 6 characters">
+
+          <button type="submit" class="btn btn-primary btn-block" id="signupSubmit">Create free account</button>
+        </form>
+
+        <p class="auth-note">By continuing, you agree this is a student project built for the Web Weaver Contest — not a production platform.</p>
+      </div>
+
+      <div class="auth-side" aria-hidden="true">
+        <p class="eyebrow">Your account unlocks</p>
+        <ul class="auth-perks">
+          <li>Track progress across all four rungs</li>
+          <li>Save and resume any program</li>
+          <li>Download certificates once earned</li>
+          <li>Get matched to hiring partners</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="logo">
+        <svg class="logo-mark" width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="6" y1="2" x2="6" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="22" y1="2" x2="22" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="6" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="6" y1="14" x2="22" y2="14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="6" y1="20" x2="22" y2="20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        Skill India Digital Hub
+      </span>
+      <p>A student-built project for the Web Weaver Contest, 2026.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <div>
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="stories.html">Success Stories</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="login.html">Log in</a>
+        <a href="login.html">Sign up</a>
+        <a href="admin.html">Admin</a>
+      </div>
+      <div>
+        <h4>Credits</h4>
+        <p class="credit-note">Icons and illustrations are original SVGs created for this project. Typefaces: Space Grotesk, Inter, JetBrains Mono (Google Fonts, Open Font License).</p>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 Skill India Digital Hub. Built for educational purposes.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

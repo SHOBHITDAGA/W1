@@ -249,6 +249,59 @@ ul{ margin:0; padding:0; list-style:none; }
 }
 
 /* ==========================================================
+   Contact page
+   ========================================================== */
+.contact-wrap{ display:grid; grid-template-columns:1fr .7fr; gap:48px; align-items:start; max-width:920px; }
+.contact-form select,
+.contact-form textarea{
+  font-family:var(--font-body); font-size:.95rem; padding:11px 14px;
+  border:1.5px solid var(--line); border-radius:8px; background:var(--paper);
+  resize:vertical;
+}
+.contact-form select:focus,
+.contact-form textarea:focus{ border-color:var(--teal); outline:none; }
+
+.contact-side{ padding-top:12px; }
+.contact-details{ display:flex; flex-direction:column; gap:18px; }
+.contact-details li{ display:flex; flex-direction:column; gap:2px; font-size:.92rem; }
+.contact-details strong{ font-family:var(--font-display); font-size:.85rem; }
+.contact-details span{ color:var(--ink-soft); }
+
+@media (max-width: 720px){
+  .contact-wrap{ grid-template-columns:1fr; }
+  .contact-side{ order:-1; padding-top:0; }
+}
+
+/* ==========================================================
+   Admin dashboard
+   ========================================================== */
+.admin-summary{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin-bottom:8px; }
+.stat-card{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  padding:24px; text-align:center;
+}
+.stat-num{ display:block; font-family:var(--font-mono); font-size:2rem; font-weight:500; color:var(--ink); }
+.stat-label{ font-size:.85rem; color:var(--ink-soft); }
+
+.admin-dashboard h2{ font-size:1.2rem; margin:36px 0 16px; }
+
+.table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--radius); background:var(--white); }
+.admin-table{ width:100%; border-collapse:collapse; font-size:.88rem; min-width:560px; }
+.admin-table th{
+  text-align:left; font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase;
+  letter-spacing:.04em; color:var(--ink-soft); padding:14px 16px; border-bottom:1px solid var(--line);
+  background:var(--paper-dim);
+}
+.admin-table td{ padding:14px 16px; border-bottom:1px solid var(--line); color:var(--ink); vertical-align:top; }
+.admin-table tr:last-child td{ border-bottom:none; }
+.msg-cell{ max-width:280px; }
+.table-empty{ text-align:center; color:var(--ink-soft); padding:28px !important; }
+
+@media (max-width: 720px){
+  .admin-summary{ grid-template-columns:1fr; }
+}
+
+/* ==========================================================
    Rung divider — signature element between sections
    ========================================================== */
 .rung-divider{

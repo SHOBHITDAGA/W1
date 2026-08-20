@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Track — Skill India Digital Hub</title>
+<meta name="description" content="Complete four-rung Web Development course: learn, practice, take the assessment, and earn a certificate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo" aria-label="Skill India Digital Hub, home">
+      <svg class="logo-mark" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="6" y1="2" x2="6" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="22" y1="2" x2="22" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="6" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="6" y1="14" x2="22" y2="14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="6" y1="20" x2="22" y2="20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span>Skill India <strong>Digital Hub</strong></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="stories.html">Success Stories</a>
+      <a href="contact.html">Contact</a>
+      <a href="quiz.html">Skill Quiz</a>
+      <a href="login.html" class="nav-cta">Log in</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="prog-tag">IT &amp; Software</span>
+      <h1>Web Development Track</h1>
+      <p class="hero-lede">Go from your first line of HTML to a deployed website — twelve weeks of structured lessons, one practice project, a proctored-style assessment, and a certificate you can show employers.</p>
+      <p class="prog-meta">12 weeks · Beginner · Certificate: SIDH-WD01</p>
+    </div>
+  </section>
+
+  <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- RUNG 1: LEARN -->
+  <section class="section course-rung" id="learn">
+    <div class="wrap">
+      <span class="step-num">01</span>
+      <h2>Learn</h2>
+      <p class="section-lede">Five modules, each with short lessons you can complete in one sitting.</p>
+      <div class="module-list">
+        <details class="module" open>
+          <summary>Module 1 — HTML Foundations</summary>
+          <p>Document structure, semantic tags, headings, links, lists, and images. Build your first static page.</p>
+        </details>
+        <details class="module">
+          <summary>Module 2 — CSS Styling</summary>
+          <p>Selectors, the box model, colors and typography, and basic responsive layout with Flexbox.</p>
+        </details>
+        <details class="module">
+          <summary>Module 3 — JavaScript Basics</summary>
+          <p>Variables, functions, events, and DOM manipulation — making a page respond to clicks and input.</p>
+        </details>
+        <details class="module">
+          <summary>Module 4 — Responsive Design</summary>
+          <p>Media queries, mobile-first thinking, and testing across screen sizes.</p>
+        </details>
+        <details class="module">
+          <summary>Module 5 — Deployment</summary>
+          <p>Using GitHub and a free host (Netlify or GitHub Pages) to put your site live on the internet.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- RUNG 2: PRACTICE -->
+  <section class="section course-rung mission-band" id="practice">
+    <div class="wrap">
+      <span class="step-num">02</span>
+      <h2>Practice</h2>
+      <p class="section-lede">Build a real, deployed personal portfolio site using everything from Modules 1–5: at least three pages, responsive layout, and one working interactive element (like a contact form or a toggle menu).</p>
+      <p>Submit your live link through the <a href="contact.html" class="text-link">contact form</a> with subject "Program question" for informal feedback before you sit the assessment.</p>
+    </div>
+  </section>
+
+  <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- RUNG 3: CERTIFY (ASSESSMENT) -->
+  <section class="section course-rung" id="certify">
+    <div class="wrap">
+      <span class="step-num">03</span>
+      <h2>Certify</h2>
+      <p class="section-lede">Ten questions covering Modules 1–4. Score 70% or higher to pass. You can retake it as many times as you need.</p>
+
+      <div class="assessment-card" id="assessmentCard">
+        <p class="quiz-step-label" id="assessStepLabel">Question 1 of 10</p>
+        <div class="quiz-progress" aria-hidden="true"><div class="quiz-progress-bar" id="assessProgressBar"></div></div>
+        <div id="assessmentQuestions"></div>
+      </div>
+
+      <div class="assessment-result" id="assessmentResult" hidden>
+        <h3 id="assessResultTitle">—</h3>
+        <p id="assessResultText"></p>
+        <button class="btn btn-ghost" id="btnRetakeAssessment">Retake assessment</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- RUNG 4: EMPLOY / CERTIFICATE -->
+  <section class="section course-rung" id="employ">
+    <div class="wrap">
+      <span class="step-num">04</span>
+      <h2>Employ</h2>
+      <p class="section-lede">Pass the assessment while logged in, and your certificate unlocks below — ready to save or print.</p>
+
+      <div class="cert-gate" id="certGate">
+        <p id="certGateText">Complete the assessment above with a passing score to unlock your certificate.</p>
+      </div>
+
+      <div class="certificate" id="certificate" hidden>
+        <div class="certificate-inner">
+          <p class="cert-eyebrow">Skill India Digital Hub</p>
+          <h3>Certificate of Completion</h3>
+          <p class="cert-line">This certifies that</p>
+          <p class="cert-name" id="certName">—</p>
+          <p class="cert-line">has successfully completed the</p>
+          <p class="cert-course">Web Development Track</p>
+          <p class="cert-meta">Certificate ID: SIDH-WD01 · Issued <span id="certDate">—</span></p>
+        </div>
+        <button class="btn btn-primary" id="btnPrintCert">Save / Print Certificate</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="logo">
+        <svg class="logo-mark" width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="6" y1="2" x2="6" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="22" y1="2" x2="22" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="6" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="6" y1="14" x2="22" y2="14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="6" y1="20" x2="22" y2="20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        Skill India Digital Hub
+      </span>
+      <p>A student-built project for the Web Weaver Contest, 2026.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <div>
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="stories.html">Success Stories</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="login.html">Log in</a>
+        <a href="login.html">Sign up</a>
+        <a href="admin.html">Admin</a>
+      </div>
+      <div>
+        <h4>Credits</h4>
+        <p class="credit-note">Icons and illustrations are original SVGs created for this project. Typefaces: Space Grotesk, Inter, JetBrains Mono (Google Fonts, Open Font License).</p>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 Skill India Digital Hub. Built for educational purposes.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/main.js"></script>
+<script src="js/course.js"></script>
+</body>
+</html>

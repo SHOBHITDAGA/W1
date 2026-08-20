@@ -64,22 +64,27 @@
         <details class="module" open>
           <summary>Module 1 — HTML Foundations</summary>
           <p>Document structure, semantic tags, headings, links, lists, and images. Build your first static page.</p>
+          <a href="https://www.youtube.com/watch?v=pQN-pnXPaVg" target="_blank" rel="noopener" class="module-video">▶ Watch: HTML Full Course — freeCodeCamp</a>
         </details>
         <details class="module">
           <summary>Module 2 — CSS Styling</summary>
           <p>Selectors, the box model, colors and typography, and basic responsive layout with Flexbox.</p>
+          <a href="https://www.youtube.com/watch?v=ieTHC78giGQ" target="_blank" rel="noopener" class="module-video">▶ Watch: CSS Full Course (Flexbox &amp; Grid) — freeCodeCamp</a>
         </details>
         <details class="module">
           <summary>Module 3 — JavaScript Basics</summary>
           <p>Variables, functions, events, and DOM manipulation — making a page respond to clicks and input.</p>
+          <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank" rel="noopener" class="module-video">▶ Watch: JavaScript Full Course — freeCodeCamp</a>
         </details>
         <details class="module">
           <summary>Module 4 — Responsive Design</summary>
           <p>Media queries, mobile-first thinking, and testing across screen sizes.</p>
+          <a href="https://www.freecodecamp.org/news/tag/responsive-design/" target="_blank" rel="noopener" class="module-video">▶ Read &amp; watch: Responsive Design guides — freeCodeCamp</a>
         </details>
         <details class="module">
           <summary>Module 5 — Deployment</summary>
           <p>Using GitHub and a free host (Netlify or GitHub Pages) to put your site live on the internet.</p>
+          <a href="https://www.youtube.com/watch?v=mT5siI19gtc" target="_blank" rel="noopener" class="module-video">▶ Watch: Netlify Deployment Tutorial — freeCodeCamp</a>
         </details>
       </div>
     </div>
@@ -99,52 +104,12 @@
 
   <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
 
-  <!-- RUNG 3: CERTIFY (ASSESSMENT) -->
-  <section class="section course-rung" id="certify">
-    <div class="wrap">
-      <span class="step-num">03</span>
-      <h2>Certify</h2>
-      <p class="section-lede">Ten questions covering Modules 1–4. Score 70% or higher to pass. You can retake it as many times as you need.</p>
-
-      <div class="assessment-card" id="assessmentCard">
-        <p class="quiz-step-label" id="assessStepLabel">Question 1 of 10</p>
-        <div class="quiz-progress" aria-hidden="true"><div class="quiz-progress-bar" id="assessProgressBar"></div></div>
-        <div id="assessmentQuestions"></div>
-      </div>
-
-      <div class="assessment-result" id="assessmentResult" hidden>
-        <h3 id="assessResultTitle">—</h3>
-        <p id="assessResultText"></p>
-        <button class="btn btn-ghost" id="btnRetakeAssessment">Retake assessment</button>
-      </div>
-    </div>
-  </section>
-
-  <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
-
-  <!-- RUNG 4: EMPLOY / CERTIFICATE -->
-  <section class="section course-rung" id="employ">
-    <div class="wrap">
-      <span class="step-num">04</span>
-      <h2>Employ</h2>
-      <p class="section-lede">Pass the assessment while logged in, and your certificate unlocks below — ready to save or print.</p>
-
-      <div class="cert-gate" id="certGate">
-        <p id="certGateText">Complete the assessment above with a passing score to unlock your certificate.</p>
-      </div>
-
-      <div class="certificate" id="certificate" hidden>
-        <div class="certificate-inner">
-          <p class="cert-eyebrow">Skill India Digital Hub</p>
-          <h3>Certificate of Completion</h3>
-          <p class="cert-line">This certifies that</p>
-          <p class="cert-name" id="certName">—</p>
-          <p class="cert-line">has successfully completed the</p>
-          <p class="cert-course">Web Development Track</p>
-          <p class="cert-meta">Certificate ID: SIDH-WD01 · Issued <span id="certDate">—</span></p>
-        </div>
-        <button class="btn btn-primary" id="btnPrintCert">Save / Print Certificate</button>
-      </div>
+  <!-- RUNG 3 & 4: link out to dedicated assessment page -->
+  <section class="section course-rung cta-section">
+    <div class="wrap cta-inner">
+      <h2>Ready to certify?</h2>
+      <p>The assessment lives on its own page — ten questions, 70% to pass, unlimited retakes. Pass it while logged in and your certificate unlocks immediately.</p>
+      <a href="assessment-web-development.html" class="btn btn-primary btn-lg">Start the assessment</a>
     </div>
   </section>
 
@@ -194,6 +159,5 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/supabase-client.js"></script>
 <script src="js/main.js"></script>
-<script src="js/course.js"></script>
 </body>
 </html>

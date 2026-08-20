@@ -369,6 +369,17 @@ ul{ margin:0; padding:0; list-style:none; }
 }
 .module summary{ cursor:pointer; font-family:var(--font-display); font-weight:600; font-size:.98rem; }
 .module p{ margin:12px 0 0; font-size:.92rem; }
+.module-video{
+  display:inline-block; margin-top:10px; font-size:.85rem; font-weight:600;
+  color:var(--teal);
+}
+.module-video:hover{ text-decoration:underline; }
+
+.back-link{ display:inline-block; margin-bottom:16px; font-size:.9rem; }
+.assessment-fairness-note{
+  font-size:.85rem; color:var(--ink-soft); background:var(--paper-dim);
+  border-radius:8px; padding:12px 16px; max-width:60ch;
+}
 
 .assessment-card{
   background:var(--white); border:1px solid var(--line); border-radius:var(--radius);

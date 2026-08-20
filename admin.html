@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Skill India Digital Hub</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo" aria-label="Skill India Digital Hub, home">
+      <svg class="logo-mark" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="6" y1="2" x2="6" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="22" y1="2" x2="22" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="6" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="6" y1="14" x2="22" y2="14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="6" y1="20" x2="22" y2="20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span>Skill India <strong>Digital Hub</strong></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="stories.html">Success Stories</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="nav-cta">Log in</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Shown while we check admin status, or if access is denied -->
+  <section class="page-hero" id="gateMessage">
+    <div class="wrap">
+      <p class="eyebrow">Admin dashboard</p>
+      <h1 id="gateHeading">Checking access…</h1>
+      <p class="hero-lede" id="gateText">Hang on while we confirm you're allowed in here.</p>
+    </div>
+  </section>
+
+  <!-- Real dashboard content, hidden until access is confirmed -->
+  <section class="section admin-dashboard" id="dashboardContent" hidden>
+    <div class="wrap">
+
+      <div class="admin-summary">
+        <div class="stat-card">
+          <span class="stat-num" id="statMessages">—</span>
+          <span class="stat-label">Contact messages</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" id="statEnrollments">—</span>
+          <span class="stat-label">Program enrollments</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num" id="statLearners">—</span>
+          <span class="stat-label">Registered learners</span>
+        </div>
+      </div>
+
+      <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <h2>Contact messages</h2>
+      <div class="table-wrap">
+        <table class="admin-table" id="messagesTable">
+          <thead>
+            <tr><th>Name</th><th>Email</th><th>Subject</th><th>Message</th><th>Received</th></tr>
+          </thead>
+          <tbody id="messagesBody">
+            <tr><td colspan="5" class="table-empty">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <h2>Program enrollments</h2>
+      <div class="table-wrap">
+        <table class="admin-table" id="enrollmentsTable">
+          <thead>
+            <tr><th>Program</th><th>Category</th><th>Status</th><th>Enrolled</th></tr>
+          </thead>
+          <tbody id="enrollmentsBody">
+            <tr><td colspan="4" class="table-empty">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="logo">
+        <svg class="logo-mark" width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="6" y1="2" x2="6" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="22" y1="2" x2="22" y2="26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="6" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="6" y1="14" x2="22" y2="14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="6" y1="20" x2="22" y2="20" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        Skill India Digital Hub
+      </span>
+      <p>A student-built project for the Web Weaver Contest, 2026.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <div>
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="stories.html">Success Stories</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="login.html">Log in</a>
+        <a href="login.html">Sign up</a>
+        <a href="admin.html">Admin</a>
+      </div>
+      <div>
+        <h4>Credits</h4>
+        <p class="credit-note">Icons and illustrations are original SVGs created for this project. Typefaces: Space Grotesk, Inter, JetBrains Mono (Google Fonts, Open Font License).</p>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 Skill India Digital Hub. Built for educational purposes.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

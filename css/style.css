@@ -92,6 +92,11 @@ ul{ margin:0; padding:0; list-style:none; }
   padding:8px 18px; border-radius:999px;
 }
 .nav-cta:hover{ background:var(--teal) !important; }
+.nav-logout{
+  background:transparent !important; color:var(--ink-soft) !important;
+  padding:8px 6px !important; font-size:.85rem;
+}
+.nav-logout:hover{ color:var(--ink) !important; text-decoration:underline; }
 
 .nav-toggle{
   display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px;

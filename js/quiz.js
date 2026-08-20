@@ -79,6 +79,12 @@ const RESULTS = {
 
 const CATEGORY_TO_FILTER = { it: "it", health: "health", agri: "agri", trades: "trades", design: "design" };
 
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str ?? '';
+  return div.innerHTML;
+}
+
 let currentQuestion = 0;
 const answers = [];
 
@@ -114,10 +120,10 @@ function renderQuestion() {
   btnBack.hidden = currentQuestion === 0;
 
   container.innerHTML = `
-    <h2 class="quiz-prompt">${q.prompt}</h2>
+    <h2 class="quiz-prompt">${escapeHtml(q.prompt)}</h2>
     <div class="quiz-options">
       ${q.options.map((opt, i) => `
-        <button class="quiz-option" data-cat="${opt.cat}" data-index="${i}">${opt.text}</button>
+        <button class="quiz-option" data-cat="${opt.cat}" data-index="${i}">${escapeHtml(opt.text)}</button>
       `).join('')}
     </div>
   `;

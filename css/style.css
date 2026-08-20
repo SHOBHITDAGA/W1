@@ -195,6 +195,55 @@ ul{ margin:0; padding:0; list-style:none; }
 }
 
 /* ==========================================================
+   Auth pages (login/signup)
+   ========================================================== */
+.auth-section{ padding:64px 0 96px; }
+.auth-wrap{ display:grid; grid-template-columns:1fr .8fr; gap:48px; align-items:start; max-width:900px; }
+
+.auth-card{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  padding:32px; box-shadow:0 10px 30px rgba(20,33,61,.06);
+}
+.auth-tabs{ display:flex; gap:4px; background:var(--paper-dim); border-radius:999px; padding:4px; margin-bottom:24px; }
+.auth-tab{
+  flex:1; padding:10px 0; border:none; background:transparent; border-radius:999px;
+  font-family:var(--font-display); font-weight:600; font-size:.9rem; color:var(--ink-soft); cursor:pointer;
+}
+.auth-tab.is-active{ background:var(--ink); color:var(--paper); }
+
+.auth-form{ display:flex; flex-direction:column; gap:6px; }
+.auth-form label{ font-size:.85rem; font-weight:600; margin-top:10px; }
+.auth-form input{
+  font-family:var(--font-body); font-size:.95rem; padding:11px 14px;
+  border:1.5px solid var(--line); border-radius:8px; background:var(--paper);
+}
+.auth-form input:focus{ border-color:var(--teal); outline:none; }
+.btn-block{ width:100%; margin-top:18px; }
+
+.auth-status{
+  font-size:.88rem; padding:10px 14px; border-radius:8px; margin-bottom:16px;
+}
+.auth-status.is-error{ background:#FBEAE5; color:#B3351E; }
+.auth-status.is-success{ background:#E6F2EF; color:var(--teal); }
+
+.auth-note{ font-size:.78rem; color:var(--ink-soft); margin:18px 0 0; }
+
+.auth-side{ padding-top:20px; }
+.auth-perks{ display:flex; flex-direction:column; gap:14px; }
+.auth-perks li{
+  font-size:.95rem; padding-left:26px; position:relative; color:var(--ink-soft);
+}
+.auth-perks li::before{
+  content:'✓'; position:absolute; left:0; top:0; color:var(--teal); font-weight:700;
+}
+
+@media (max-width: 720px){
+  .auth-wrap{ grid-template-columns:1fr; }
+  .auth-side{ order:-1; padding-top:0; }
+  .auth-card{ padding:24px; }
+}
+
+/* ==========================================================
    Rung divider — signature element between sections
    ========================================================== */
 .rung-divider{

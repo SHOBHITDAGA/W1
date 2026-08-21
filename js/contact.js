@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Send a confirmation email to the person who filled the form (not to us)
     try {
       await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        to_email: payload.email,
-        to_name: payload.name,
+        email: payload.email,
+        name: payload.name,
         subject: payload.subject,
         message: payload.message
       });

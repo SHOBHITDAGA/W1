@@ -22,7 +22,50 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof supabaseClient !== 'undefined') {
     updateNavForAuthState();
   }
+
+  initScrollReveal();
+  initStatCountUp();
 });
+
+// Fade/slide-in elements as they scroll into view — applies automatically, no per-page markup needed
+function initScrollReveal() {
+  const targets = document.querySelectorAll(
+    '.section, .page-hero, .hero, .prog-card, .story-card, .recognition-card, .module, .quiz-card'
+  );
+  if (!targets.length || !('IntersectionObserver' in window)) return;
+
+  targets.forEach(el => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(el => observer.observe(el));
+}
+
+// Animate the homepage hero stat numbers counting up on load
+function initStatCountUp() {
+  const stats = document.querySelectorAll('.hero-stats dd[data-count]');
+  stats.forEach(el => {
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 40));
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = current.toLocaleString('en-IN') + suffix;
+    }, 25);
+  });
+}
 
 async function updateNavForAuthState() {
   const navCta = document.querySelector('.nav-cta');

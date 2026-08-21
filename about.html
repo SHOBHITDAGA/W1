@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Skill India Digital Hub</title>
-<meta name="description" content="How Skill India Digital Hub structures learning around Learn, Practice, Certify, Employ.">
+<title>Programs — Skill India Digital Hub</title>
+<meta name="description" content="Browse skill tracks across IT, healthcare, agriculture, trades, and design — each following the same four-rung path from learning to employment.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -31,8 +31,8 @@
     </button>
     <nav class="primary-nav" id="primaryNav">
       <a href="index.html">Home</a>
-      <a href="about.html" aria-current="page">About</a>
-      <a href="programs.html">Programs</a>
+      <a href="about.html">About</a>
+      <a href="programs.html" aria-current="page">Programs</a>
       <a href="stories.html">Success Stories</a>
       <a href="contact.html">Contact</a>
       <a href="quiz.html">Skill Quiz</a>
@@ -46,78 +46,151 @@
   <section class="page-hero">
     <div class="wrap page-hero-split">
       <div>
-        <p class="eyebrow">About the Hub</p>
-        <h1>A ladder, not a maze.</h1>
-        <p class="hero-lede">Most learners don't fail because they lack ability — they fail because the path from "interested" to "employed" is scattered across a dozen disconnected places. We built one path instead.</p>
+        <p class="eyebrow">Programs directory</p>
+        <h1>Thirty-six tracks. One structure each.</h1>
+        <p class="hero-lede">Filter by sector to find your track. Every program lists its duration, level, and what the certificate actually verifies.</p>
       </div>
       <svg class="page-hero-art" viewBox="0 0 280 240" aria-hidden="true">
         <circle cx="140" cy="120" r="100" fill="#EDEADF"/>
-        <path d="M50 170 Q90 60 140 70 Q190 80 230 170" fill="none" stroke="#14213D" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
-        <path d="M50 170 Q130 190 230 170" fill="none" stroke="#D9D4C4" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
-        <circle cx="50" cy="170" r="9" fill="#E3A73B"/>
-        <circle cx="112" cy="82" r="9" fill="#0B6E5C"/>
-        <circle cx="168" cy="78" r="9" fill="#0B6E5C"/>
-        <circle cx="230" cy="170" r="9" fill="#14213D"/>
+        <rect x="60" y="70" width="70" height="50" rx="6" fill="#FFFFFF" stroke="#14213D" stroke-width="2.5"/>
+        <rect x="150" y="70" width="70" height="50" rx="6" fill="#FFFFFF" stroke="#14213D" stroke-width="2.5"/>
+        <rect x="60" y="135" width="70" height="50" rx="6" fill="#FFFFFF" stroke="#14213D" stroke-width="2.5"/>
+        <rect x="150" y="135" width="70" height="50" rx="6" fill="#E3A73B" stroke="#C68A24" stroke-width="2.5"/>
+        <line x1="72" y1="88" x2="112" y2="88" stroke="#0B6E5C" stroke-width="3" stroke-linecap="round"/>
+        <line x1="162" y1="88" x2="202" y2="88" stroke="#0B6E5C" stroke-width="3" stroke-linecap="round"/>
+        <line x1="72" y1="153" x2="112" y2="153" stroke="#0B6E5C" stroke-width="3" stroke-linecap="round"/>
+        <line x1="162" y1="153" x2="202" y2="153" stroke="#14213D" stroke-width="3" stroke-linecap="round"/>
       </svg>
     </div>
   </section>
 
-  <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
+  <section class="section programs-directory">
+    <div class="wrap">
 
-  <section class="section">
-    <div class="wrap two-col">
-      <div>
-        <p class="eyebrow">Our approach</p>
-        <h2>Every track follows the same four rungs.</h2>
-        <p>Whether you're studying web development or wiring circuits, the structure never changes. That consistency is deliberate — it means once you understand how one track works, you understand them all.</p>
+      <div class="filter-bar" role="group" aria-label="Filter programs by sector">
+        <button class="filter-chip is-active" data-filter="all">All tracks</button>
+        <button class="filter-chip" data-filter="it">IT &amp; Software</button>
+        <button class="filter-chip" data-filter="health">Healthcare</button>
+        <button class="filter-chip" data-filter="agri">Agriculture</button>
+        <button class="filter-chip" data-filter="trades">Trades</button>
+        <button class="filter-chip" data-filter="design">Design &amp; Media</button>
       </div>
-      <ol class="ladder-steps">
-        <li>
-          <span class="step-num">01</span>
-          <div>
-            <h3>Learn</h3>
-            <p>Short, sequenced lessons with real examples — video, text, and downloadable practice sheets, built for slow connections.</p>
-          </div>
-        </li>
-        <li>
-          <span class="step-num">02</span>
-          <div>
-            <h3>Practice</h3>
-            <p>Guided projects and simulated tasks that mirror what the job actually requires, reviewed with feedback you can act on.</p>
-          </div>
-        </li>
-        <li>
-          <span class="step-num">03</span>
-          <div>
-            <h3>Certify</h3>
-            <p>A proctored assessment tied to each track. Pass it, and you receive a verifiable certificate employers can check online.</p>
-          </div>
-        </li>
-        <li>
-          <span class="step-num">04</span>
-          <div>
-            <h3>Employ</h3>
-            <p>Certified learners are listed to our hiring partners directly — no separate job portal, no starting over.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
 
-  <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="results-count" id="resultsCount" aria-live="polite">Showing 12 of 12 tracks</p>
 
-  <section class="section mission-band">
-    <div class="wrap two-col">
-      <div>
-        <p class="eyebrow">Who this is for</p>
-        <h2>Built for the learner who can't afford to guess.</h2>
-        <p>If you're choosing between a training program and a day's wages, you need to know the training will actually lead somewhere. Every track on the Hub states upfront what it takes, how long it runs, and which employers recognize the certificate — before you commit any time.</p>
+      <div class="card-grid programs-grid" id="programsGrid">
+
+        <article class="prog-card" data-category="it" data-enroll="2026-10-05">
+          <span class="prog-tag">IT &amp; Software</span>
+          <h3>Web Development</h3>
+          <p>HTML, CSS, and JavaScript fundamentals through to deploying a live, working site.</p>
+          <span class="prog-meta">12 weeks · Beginner · Certificate: SIDH-WD01</span>
+          <span class="prog-enroll">Enrollment opens: 5 Oct 2026</span>
+          <a href="course-web-development.html" class="text-link prog-course-link">Full course + certification →</a>
+        </article>
+
+        <article class="prog-card" data-category="it" data-enroll="2026-11-20">
+          <span class="prog-tag">IT &amp; Software</span>
+          <h3>Data Entry &amp; Office Tools</h3>
+          <p>Spreadsheets, document formatting, and accurate high-speed data entry for office roles.</p>
+          <span class="prog-meta">6 weeks · Beginner · Certificate: SIDH-DE01</span>
+          <span class="prog-enroll">Enrollment opens: 20 Nov 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
+        <article class="prog-card" data-category="it" data-enroll="2026-10-25">
+          <span class="prog-tag">IT &amp; Software</span>
+          <h3>IT Helpdesk Support</h3>
+          <p>Troubleshooting, ticketing systems, and customer communication for entry-level tech support.</p>
+          <span class="prog-meta">10 weeks · Beginner · Certificate: SIDH-IT02</span>
+          <span class="prog-enroll">Enrollment opens: 25 Oct 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
+        <article class="prog-card" data-category="health" data-enroll="2026-10-12">
+          <span class="prog-tag">Healthcare</span>
+          <h3>Community Health Worker</h3>
+          <p>Primary care support, patient record-keeping, and rural health outreach practice.</p>
+          <span class="prog-meta">10 weeks · Beginner · Certificate: SIDH-CH01</span>
+          <span class="prog-enroll">Enrollment opens: 12 Oct 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
+        <article class="prog-card" data-category="health" data-enroll="2026-11-02">
+          <span class="prog-tag">Healthcare</span>
+          <h3>Elder Care Assistant</h3>
+          <p>Mobility support, medication reminders, and basic first response for home care settings.</p>
+          <span class="prog-meta">8 weeks · Beginner · Certificate: SIDH-EC01</span>
+          <span class="prog-enroll">Enrollment opens: 2 Nov 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
+        <article class="prog-card" data-category="health" data-enroll="2026-11-15">
+          <span class="prog-tag">Healthcare</span>
+          <h3>Medical Records Assistant</h3>
+          <p>Digital record management and patient data privacy practices for clinics and hospitals.</p>
+          <span class="prog-meta">9 weeks · Intermediate · Certificate: SIDH-MR01</span>
+          <span class="prog-enroll">Enrollment opens: 15 Nov 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
+        <article class="prog-card" data-category="agri" data-enroll="2026-10-08">
+          <span class="prog-tag">Agriculture</span>
+          <h3>Precision Farming Basics</h3>
+          <p>Soil testing, irrigation planning, and mobile record-keeping for small and mid-size farms.</p>
+          <span class="prog-meta">8 weeks · Beginner · Certificate: SIDH-AG01</span>
+          <span class="prog-enroll">Enrollment opens: 8 Oct 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
+        <article class="prog-card" data-category="agri" data-enroll="2026-11-10">
+          <span class="prog-tag">Agriculture</span>
+          <h3>Farm Equipment Operation</h3>
+          <p>Safe operation and basic maintenance of common tractors and irrigation machinery.</p>
+          <span class="prog-meta">7 weeks · Beginner · Certificate: SIDH-AG02</span>
+          <span class="prog-enroll">Enrollment opens: 10 Nov 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
+        <article class="prog-card" data-category="trades" data-enroll="2026-10-18">
+          <span class="prog-tag">Trades</span>
+          <h3>Electrical Fundamentals</h3>
+          <p>Wiring safety, circuit basics, and hands-on assessment toward journeyman certification.</p>
+          <span class="prog-meta">14 weeks · Intermediate · Certificate: SIDH-EL01</span>
+          <span class="prog-enroll">Enrollment opens: 18 Oct 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
+        <article class="prog-card" data-category="trades" data-enroll="2026-11-05">
+          <span class="prog-tag">Trades</span>
+          <h3>Plumbing Essentials</h3>
+          <p>Pipefitting, leak diagnosis, and fixture installation with supervised practical hours.</p>
+          <span class="prog-meta">12 weeks · Beginner · Certificate: SIDH-PL01</span>
+          <span class="prog-enroll">Enrollment opens: 5 Nov 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
+        <article class="prog-card" data-category="design" data-enroll="2026-10-22">
+          <span class="prog-tag">Design &amp; Media</span>
+          <h3>Graphic Design Foundations</h3>
+          <p>Layout, typography, and brand basics using free and open-source design tools.</p>
+          <span class="prog-meta">10 weeks · Beginner · Certificate: SIDH-GD01</span>
+          <span class="prog-enroll">Enrollment opens: 22 Oct 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
+        <article class="prog-card" data-category="design" data-enroll="2026-11-28">
+          <span class="prog-tag">Design &amp; Media</span>
+          <h3>Video Editing for Social Media</h3>
+          <p>Short-form editing, captioning, and export settings for common platforms.</p>
+          <span class="prog-meta">6 weeks · Beginner · Certificate: SIDH-VE01</span>
+          <span class="prog-enroll">Enrollment opens: 28 Nov 2026</span>
+          <span class="prog-course-soon">Full course: coming soon</span>
+        </article>
+
       </div>
-      <div>
-        <p class="eyebrow">What we don't do</p>
-        <h2>No paywalled promises.</h2>
-        <p>Core lessons are free to access for every track. We charge only for proctored certification, at a fraction of typical exam-center costs, because a certificate only matters if the learning behind it was genuinely open.</p>
-      </div>
+
+      <p class="no-results" id="noResults" hidden>No tracks match this filter yet — check back soon, or explore another sector.</p>
     </div>
   </section>
 
@@ -125,9 +198,9 @@
 
   <section class="section cta-section">
     <div class="wrap cta-inner">
-      <h2>See the tracks for yourself.</h2>
-      <p>Every program page shows the full four-rung breakdown before you enrol.</p>
-      <a href="programs.html" class="btn btn-primary btn-lg">Browse programs</a>
+      <h2>Not sure which track fits?</h2>
+      <p>Talk to us — we'll help you match your interests to a sector before you commit.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Contact an advisor</a>
     </div>
   </section>
 
@@ -177,5 +250,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/supabase-client.js"></script>
 <script src="js/main.js"></script>
+<script src="js/programs.js"></script>
 </body>
 </html>

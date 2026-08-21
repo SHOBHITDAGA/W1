@@ -52,6 +52,18 @@
     </div>
   </section>
 
+  <!-- Enroll gate — shown until the learner enrolls; course content stays hidden until then -->
+  <section class="section enroll-gate" id="enrollGate">
+    <div class="wrap">
+      <div class="enroll-card" id="enrollCard">
+        <p id="enrollGateText">Checking enrollment status…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gated course content — hidden until enrolled -->
+  <div id="courseContent" hidden>
+
   <div class="rung-divider" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <!-- RUNG 1: LEARN -->
@@ -113,6 +125,8 @@
     </div>
   </section>
 
+  </div><!-- /#courseContent -->
+
 </main>
 
 <footer class="site-footer">
@@ -158,6 +172,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/supabase-client.js"></script>
+<script>
+  window.PROGRAM_NAME = 'Web Development';
+  window.PROGRAM_CATEGORY = 'it';
+</script>
 <script src="js/main.js"></script>
+<script src="js/enroll.js"></script>
 </body>
 </html>

@@ -53,6 +53,16 @@
     </div>
   </section>
 
+  <!-- Enroll gate — must be enrolled to attempt the assessment -->
+  <section class="section enroll-gate" id="enrollGate">
+    <div class="wrap">
+      <div class="enroll-card" id="enrollCard">
+        <p id="enrollGateText">Checking enrollment status…</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="courseContent" hidden>
   <section class="section">
     <div class="wrap">
 
@@ -93,6 +103,7 @@
 
     </div>
   </section>
+  </div><!-- /#courseContent -->
 
 </main>
 
@@ -139,7 +150,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/supabase-client.js"></script>
+<script>
+  window.PROGRAM_NAME = 'Web Development';
+  window.PROGRAM_CATEGORY = 'it';
+</script>
 <script src="js/main.js"></script>
+<script src="js/enroll.js"></script>
 <script src="js/assessment.js"></script>
 </body>
 </html>

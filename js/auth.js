@@ -35,6 +35,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // FORGOT PASSWORD
+  document.getElementById('btnForgotPassword').addEventListener('click', async () => {
+    const email = document.getElementById('loginEmail').value.trim();
+
+    if (!email) {
+      showStatus('Type your email above first, then click "Forgot password?"', true);
+      return;
+    }
+
+    const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin + window.location.pathname.replace('login.html', 'reset-password.html')
+    });
+
+    if (error) {
+      showStatus(error.message, true);
+      return;
+    }
+
+    showStatus(`Password reset link sent to ${email} — check your inbox.`);
+  });
+
   // LOGIN
   loginPanel.addEventListener('submit', async (e) => {
     e.preventDefault();

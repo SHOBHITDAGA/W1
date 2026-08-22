@@ -171,6 +171,11 @@ ul{ margin:0; padding:0; list-style:none; }
 .page-hero-split{ display:grid; grid-template-columns:1.2fr .8fr; gap:36px; align-items:center; }
 .page-hero-art{ width:100%; max-width:260px; justify-self:center; }
 
+.page-hero--teal{ background:linear-gradient(180deg, #F0F7F5 0%, var(--paper) 100%); }
+.page-hero--ochre{ background:linear-gradient(180deg, #FBF3E3 0%, var(--paper) 100%); }
+.page-hero--teal .eyebrow{ color:var(--teal); }
+.page-hero--ochre .eyebrow{ color:var(--ochre-dark); }
+
 @media (max-width: 900px){
   .page-hero-split{ grid-template-columns:1fr; }
   .page-hero-art{ order:-1; max-width:180px; }
